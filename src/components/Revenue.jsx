@@ -5,31 +5,33 @@ import { FaArrowTrendUp } from "react-icons/fa6";
 export default function Revenue() {
   return (
     <>
-      <div className="w-[730px]">
+      <div className="2xl:w-[730px] sm:w-[600px] w-[360px]">
         <div className="flex justify-between">
           <div className="flex space-x-4 items-center">
             <p className="font-bold">Revenue</p>
             <p className="flex items-center space-x-1 text-green-600">
-              <FaArrowTrendUp />
+              <FaArrowTrendUp className="sm:block hidden" />
               <p>+0.3%</p>
             </p>
           </div>
-          <div className="flex space-x-7">
+          <div className="flex sm:space-x-7 space-x-3">
             <div className="flex items-center space-x-3">
-              <p className="">Course Visit</p>
+              <p className="hidden sm:block">Course Visit</p>
+              <p className="sm:hidden">Visit</p>
               <div className="relative">
                 <div className="absolute p-2 bg-[#464677] rounded-full -top-2"></div>
               </div>
             </div>
 
             <div className="flex items-center space-x-3">
-              <p className="">Course Sale</p>
+              <p className="sm:block hidden">Course Sale</p>
+              <p className="sm:hidden">Sale</p>
               <div className="relative">
                 <div className="absolute p-2 bg-[#ff007f] rounded-full -top-2"></div>
               </div>
             </div>
 
-            <div className="">
+            <div className="sm:pl-0 pl-1">
               <select
                 name="filterOption"
                 id=""
@@ -55,7 +57,7 @@ export default function Revenue() {
             </div>
           </div>
         </div>
-        <div className="pt-3">
+        <div className="pt-3  overflow-auto">
           <RevenueGraph />
         </div>
       </div>

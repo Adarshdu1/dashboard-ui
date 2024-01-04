@@ -5,7 +5,7 @@ import { SlOptionsVertical } from "react-icons/sl";
 export default function Viewer() {
   return (
     <>
-      <div className="w-[400px]">
+      <div className=" w-[360px]">
         <div className="flex items-center justify-between">
           <div className="flex space-x-4 items-center">
             <p className="font-bold">Visitors</p>
@@ -18,7 +18,7 @@ export default function Viewer() {
             <SlOptionsVertical className="text-slate-400" />
           </div>
         </div>
-        <div className="pt-3">
+        <div className="pt-3 overflow-auto">
           <ViewerGraph />
         </div>
       </div>

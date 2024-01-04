@@ -13,7 +13,7 @@ export default function Navbar({ toggle, setToggle }) {
 
   return (
     <>
-      <div className="flex justify-between px-10 py-7 ">
+      <div className="flex justify-between px-5 sm:px-10 py-7 ">
         <div className="flex items-center space-x-3 text-xl text-slate-700">
           <div
             className="hover:outline hover:outline-1 hover:rounded-md p-1 "
@@ -25,9 +25,9 @@ export default function Navbar({ toggle, setToggle }) {
               <RxHamburgerMenu className="text-2xl" />
             )}
           </div>
-          <div className="font-bold">Hello Mad✋</div>
+          <div className="font-bold whitespace-nowrap">Hello Mad✋</div>
         </div>
-        <div className="flex py-1 px-3 bg-gray-100 items-center space-x-1 rounded-md text-lg">
+        <div className="sm:flex hidden py-1 px-3 bg-gray-100 items-center space-x-1 rounded-md text-lg">
           <CiSearch className="text-gray-500 font-bold text-2xl" />
           <input
             type="text"
@@ -37,14 +37,16 @@ export default function Navbar({ toggle, setToggle }) {
             className="p-1 outline-none bg-gray-100 text-gray-700"
           />
         </div>
-        <div className="flex space-x-9">
-          <div className="text-md">
+        <div className="flex space-x-7">
+          <div className="text-md sm:block hidden">
             <button
               type="button"
               className="flex items-center space-x-1 p-3 bg-orange-600 hover:bg-orange-700 active:bg-orange-800 text-white rounded-md"
             >
               <HiOutlineUpload className="text-2xl" />
-              <div className="">New Upload</div>
+              <div className="whitespace-nowrap hidden lg:block">
+                New Upload
+              </div>
             </button>
           </div>
           <div className="flex items-center py-1 px-3 bg-gray-100 rounded-md">
@@ -54,16 +56,16 @@ export default function Navbar({ toggle, setToggle }) {
               <p className="absolute top-0 right-1 text-[10px] text-white">2</p>
             </div>
           </div>
-          <div className="flex items-center py-1 px-3 bg-gray-100 rounded-md">
+          <div className="sm:flex hidden items-center py-1 px-3 bg-gray-100 rounded-md">
             <AiOutlineMessage className="text-2xl" />
           </div>
-          <div className="flex items-center py-1 px-3 bg-gray-100 rounded-md">
+          <div className="lg:flex items-center py-1 px-3 bg-gray-100 rounded-md hidden">
             <TbActivityHeartbeat className="text-2xl" />
           </div>
           <div className="flex items-center space-x-3">
             <div className="flex flex-col items-end -space-y-1">
-              <p className="font-bold text-slate-700">TheMad</p>
-              <p className="text-slate-600">Designer</p>
+              <p className="font-bold text-slate-700 hidden lg:block">TheMad</p>
+              <p className="text-slate-600 hidden lg:block">Designer</p>
             </div>
             <div className="">
               <img
@@ -71,6 +73,7 @@ export default function Navbar({ toggle, setToggle }) {
                 src="/profile_logo.jpeg"
                 alt=""
                 width={50}
+                height={50}
               />
             </div>
           </div>

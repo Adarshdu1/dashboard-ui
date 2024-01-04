@@ -5,7 +5,7 @@ import { SlOptionsVertical } from "react-icons/sl";
 export default function WeeklyStat() {
   return (
     <>
-      <div className="w-[300px]">
+      <div className="sm:w-[300px] w-[360px]">
         <div className="flex items-center justify-between">
           <div className="font-bold">Weekly Sales Stats</div>
           <div className="">
@@ -15,8 +15,11 @@ export default function WeeklyStat() {
         <div className="pt-2">
           <hr className="border-slate-200" />
         </div>
-        <div className="pt-3">
-          <WeeklyStatGraph />
+        <div className="pt-3 sm:block hidden">
+          <WeeklyStatGraph wide={300} />
+        </div>
+        <div className="pt-3 sm:hidden ">
+          <WeeklyStatGraph wide={360} />
         </div>
         <div className="">
           <div className="flex justify-between items-center pb-2">

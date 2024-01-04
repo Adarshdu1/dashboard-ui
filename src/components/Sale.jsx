@@ -5,7 +5,7 @@ import { SlOptionsVertical } from "react-icons/sl";
 export default function Sale() {
   return (
     <>
-      <div className="w-[250px] text-gray-700">
+      <div className="sm:w-[250px] w-[360px] text-gray-700">
         <div className="flex items-center justify-between">
           <div className="font-bold">Sale</div>
           <div className="">
@@ -15,9 +15,9 @@ export default function Sale() {
         <div className="pt-2">
           <hr className="border-slate-200" />
         </div>
-        <div className="relative">
+        <div className="relative sm:block flex justify-center">
           <SaleGraph />
-          <div className="absolute top-[53%] right-[53%] transform translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center">
+          <div className="absolute top-[53%] sm:right-[53%] right-[48%] transform translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center">
             <h1 className="font-bold">3,500</h1>
             <p className="text-slate-500">Total Sale</p>
           </div>

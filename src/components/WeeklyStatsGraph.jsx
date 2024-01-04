@@ -8,7 +8,7 @@ import {
   YAxis,
 } from "recharts";
 
-export default function WeeklyStatGraph() {
+export default function WeeklyStatGraph({ wide }) {
   const data = [
     { visit: 20, sale: 1, month: "Mon" },
     { visit: 55, sale: 25, month: "Tue" },
@@ -20,7 +20,7 @@ export default function WeeklyStatGraph() {
   ];
   return (
     <AreaChart
-      width={300}
+      width={wide}
       height={100}
       data={data}
       margin={{ top: 0, right: 0, left: -25, bottom: 0 }}

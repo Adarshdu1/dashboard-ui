@@ -6,18 +6,20 @@ export default function CourseStatus() {
       <div className="">
         <div className="flex justify-between">
           <div className="flex space-x-4 items-center">
-            <p className="font-bold">Course Status</p>
+            <p className="font-bold whitespace-nowrap">Course Status</p>
           </div>
           <div className="flex space-x-7">
             <div className="flex items-center space-x-3">
-              <p className="">Course Visit</p>
+              <p className="sm:block hidden">Course Visit</p>
+              <p className="sm:hidden">Visit</p>
               <div className="relative">
                 <div className="absolute p-2 bg-[#464677] rounded-full -top-2"></div>
               </div>
             </div>
 
             <div className="flex items-center space-x-3">
-              <p className="">Course Sale</p>
+              <p className="sm:block hidden">Course Sale</p>
+              <p className="sm:hidden">Sale</p>
               <div className="relative">
                 <div className="absolute p-2 bg-[#ff007f] rounded-full -top-2"></div>
               </div>
@@ -49,8 +51,8 @@ export default function CourseStatus() {
             </div>
           </div>
         </div>
-        <div className="pt-5">
-          <table className="w-full   p-2">
+        <div className="pt-5 overflow-auto">
+          <table className="w-[1200px] xl:w-full   p-2">
             <thead className="bg-gray-100  h-10 border-b">
               <tr className="text-left">
                 <th className="p-2">Name</th>

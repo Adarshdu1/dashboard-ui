@@ -24,7 +24,7 @@ export default function ViewerGraph() {
     <>
       <BarChart
         margin={{ top: 0, right: 0, left: -25, bottom: 0 }}
-        width={400}
+        width={360}
         height={250}
         data={data}
       >

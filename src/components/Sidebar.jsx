@@ -17,15 +17,17 @@ export default function Sidebar() {
     <>
       <div className="whitespace-nowrap bg-[#464677] h-full">
         {/* Logo */}
-        <div className="py-7 px-10 flex items-center space-x-2">
+        <div className="py-7 sm:px-10 px-7 flex items-center space-x-2">
           <div className="-rotate-45 p-1 bg-pink-500 rounded-full">
             <FaRegLightbulb className="text-xl text-white" />
           </div>
-          <div className="text-2xl font-bold text-white">Skilify Admin</div>
+          <div className="sm:text-2xl text-lg font-bold text-white">
+            Skilify Admin
+          </div>
         </div>
         {/* Navbar */}
         <div className="">
-          <div className="flex flex-col space-y-2 px-7 pb-4">
+          <div className="flex flex-col space-y-2 sm:px-7 px-4 pb-4">
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -35,10 +37,10 @@ export default function Sidebar() {
               }
             >
               <div className="flex space-x-6 items-center ">
-                <AiOutlineHome className="text-2xl" />
-                <div className="text-xl">Dashboard</div>
+                <AiOutlineHome className="sm:text-2xl text-lg" />
+                <div className="sm:text-xl text-md">Dashboard</div>
               </div>
-              <div className="text-lg font-semibold"> &gt;</div>
+              <div className="sm:text-lg text-md font-semibold"> &gt;</div>
             </NavLink>
             <NavLink
               to="/courses"
@@ -49,10 +51,10 @@ export default function Sidebar() {
               }
             >
               <div className="flex space-x-6 items-center">
-                <FaRegPlayCircle className="text-2xl" />
-                <div className="text-xl">My Course</div>
+                <FaRegPlayCircle className="sm:text-2xl text-lg" />
+                <div className="sm:text-xl text-md">My Course</div>
               </div>
-              <div className="text-lg font-semibold"> &gt;</div>
+              <div className="sm:text-lg text-md font-semibold"> &gt;</div>
             </NavLink>
             <NavLink
               to="/calendar"
@@ -63,10 +65,10 @@ export default function Sidebar() {
               }
             >
               <div className="flex space-x-6 items-center">
-                <CiCalendar className="font-bold text-2xl" />
-                <div className="text-xl">Calendar</div>
+                <CiCalendar className="font-bold sm:text-2xl text-lg" />
+                <div className="sm:text-xl text-md">Calendar</div>
               </div>
-              <div className="text-lg font-semibold"> &gt;</div>
+              <div className="sm:text-lg text-md font-semibold"> &gt;</div>
             </NavLink>
             <NavLink
               to="/resources"
@@ -77,10 +79,10 @@ export default function Sidebar() {
               }
             >
               <div className="flex space-x-6 items-center">
-                <IoBookOutline className="text-2xl" />
-                <div className="text-xl">Resource</div>
+                <IoBookOutline className="sm:text-2xl text-lg" />
+                <div className="text-md sm:text-xl">Resource</div>
               </div>
-              <div className="text-lg font-semibold"> &gt;</div>
+              <div className="sm:text-lg text-md font-semibold"> &gt;</div>
             </NavLink>
             <NavLink
               to="/quiz"
@@ -91,10 +93,10 @@ export default function Sidebar() {
               }
             >
               <div className="flex space-x-6 items-center">
-                <TbPuzzle className="text-2xl" />
-                <div className="text-xl">Quiz</div>
+                <TbPuzzle className="text-lg sm:text-2xl" />
+                <div className="sm:text-xl text-md">Quiz</div>
               </div>
-              <div className="text-lg font-semibold"> &gt;</div>
+              <div className="sm:text-lg text-md font-semibold"> &gt;</div>
             </NavLink>
             <NavLink
               to="/message"
@@ -105,10 +107,10 @@ export default function Sidebar() {
               }
             >
               <div className="flex space-x-6 items-center ">
-                <FiMessageSquare className="text-2xl" />
-                <div className="text-xl">Message</div>
+                <FiMessageSquare className="sm:text-2xl text-lg" />
+                <div className="sm:text-xl text-md">Message</div>
               </div>
-              <div className="text-lg font-semibold"> &gt;</div>
+              <div className="sm:text-lg text-md font-semibold"> &gt;</div>
             </NavLink>
             <NavLink
               to="/status"
@@ -119,10 +121,10 @@ export default function Sidebar() {
               }
             >
               <div className="flex space-x-6 items-center">
-                <FaArrowTrendUp className="text-2xl" />
-                <div className="text-xl">My Status</div>
+                <FaArrowTrendUp className="sm:text-2xl text-lg" />
+                <div className="sm:text-xl text-md">My Status</div>
               </div>
-              <div className="text-lg font-semibold"> &gt;</div>
+              <div className="sm:text-lg text-md font-semibold"> &gt;</div>
             </NavLink>
             <NavLink
               to="/wallet"
@@ -133,10 +135,10 @@ export default function Sidebar() {
               }
             >
               <div className="flex space-x-6 items-center">
-                <LuWallet className="text-2xl" />
-                <div className="text-xl">Wallet</div>
+                <LuWallet className="sm:text-2xl text-lg" />
+                <div className="sm:text-xl text-md">Wallet</div>
               </div>
-              <div className="text-lg font-semibold"> &gt;</div>
+              <div className="sm:text-lg text-md font-semibold"> &gt;</div>
             </NavLink>
             <NavLink
               to="/account"
@@ -147,16 +149,16 @@ export default function Sidebar() {
               }
             >
               <div className="flex space-x-6 items-center ">
-                <MdOutlinePersonAddAlt className="text-2xl" />
-                <div className="text-xl">My Account</div>
+                <MdOutlinePersonAddAlt className="sm:text-2xl text-lg" />
+                <div className="sm:text-xl text-md">My Account</div>
               </div>
-              <div className="text-lg font-semibold"> &gt;</div>
+              <div className="sm:text-lg text-md font-semibold"> &gt;</div>
             </NavLink>
           </div>
         </div>
         {/* Promotion */}
-        <div className="px-7 py-10">
-          <div className="bg-white flex flex-col items-center p-7 rounded-xl space-y-7">
+        <div className="sm:px-7 px-4 sm:py-10 py-5">
+          <div className="bg-white flex flex-col items-center sm:p-7 p-5 rounded-xl space-y-7">
             <div className="">
               <img src="/vite.svg" alt="" width={100} />
             </div>
@@ -171,7 +173,7 @@ export default function Sidebar() {
           </div>
         </div>
         {/* Footer */}
-        <div className="px-7 pb-5">
+        <div className="sm:px-7 px-5 pb-5 2xl:text-base text-sm">
           <p className="font-semibold text-white whitespace-nowrap">
             Skilify Teacher Dashboard Admin
           </p>
