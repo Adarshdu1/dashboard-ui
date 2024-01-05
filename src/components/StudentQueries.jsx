@@ -6,7 +6,7 @@ import { IoMdCheckmark, IoMdOpen } from "react-icons/io";
 export default function StudentQueries() {
   return (
     <>
-      <div className="sm:w-[500px] w-[360px]">
+      <div className="sm:w-full w-[360px]">
         <div className="flex items-center justify-between pb-7">
           <div className="font-bold">Student Queries</div>
           <div className="">
@@ -19,9 +19,7 @@ export default function StudentQueries() {
               <img src="/group_coding.jpeg" width={50} alt="" />
             </div>
             <div className="">
-              <div className="font-semibold whitespace-nowrap">
-                Machine Learning Bootcamp
-              </div>
+              <div className="font-semibold">Machine Learning Bootcamp</div>
 
               <div className="text-slate-500">By James Board</div>
             </div>
@@ -49,9 +47,7 @@ export default function StudentQueries() {
               <img src="/group_coding.jpeg" width={50} alt="" />
             </div>
             <div className="">
-              <div className="font-semibold whitespace-nowrap">
-                Python & R in Data Science
-              </div>
+              <div className="font-semibold">Python & R in Data Science</div>
 
               <div className="text-slate-500">Data Science</div>
             </div>
@@ -79,9 +75,7 @@ export default function StudentQueries() {
               <img src="/group_coding.jpeg" width={50} alt="" />
             </div>
             <div className="">
-              <div className="font-semibold whitespace-nowrap">
-                SuperDataScience Support
-              </div>
+              <div className="font-semibold ">SuperDataScience Support</div>
 
               <div className="text-slate-500">Data Science</div>
             </div>
@@ -109,9 +103,7 @@ export default function StudentQueries() {
               <img src="/group_coding.jpeg" width={50} alt="" />
             </div>
             <div className="">
-              <div className="font-semibold whitespace-nowrap">
-                Analyst Bootcamp 2024
-              </div>
+              <div className="font-semibold ">Analyst Bootcamp 2024</div>
 
               <div className="text-slate-500">Data Science</div>
             </div>

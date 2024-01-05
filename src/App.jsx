@@ -31,14 +31,24 @@ export default function Hello() {
               <UserStat stats="Engagements" />
               <UserStat stats="Engaged audience" />
             </div>
-            <div className="sm:px-10 px-5 py-5 sm:flex grid grid-cols-1 sm:space-y-0 space-y-3 justify-between">
-              <Revenue />
+            <div className="sm:px-10 px-5 py-5 sm:grid sm:grid-cols-3 grid grid-cols-1 sm:space-y-0 space-y-3 sm:space-x-5">
+              <div className="col-span-2">
+                <Revenue />
+              </div>
               <Viewer />
             </div>
-            <div className="sm:px-10 px-5 py-5 sm:flex grid grid-cols-1 sm:space-y-0 space-y-3   justify-between">
-              <Sale />
-              <WeeklyStat />
-              <StudentQueries />
+            <div className="sm:px-10 px-5 py-5 sm:grid sm:grid-cols-10 grid grid-cols-1 sm:space-y-0 space-y-3 sm:space-x-10   justify-between">
+              <div className="sm:col-span-2">
+                {" "}
+                <Sale />
+              </div>
+              <div className="sm:col-span-3">
+                <WeeklyStat />
+              </div>
+              <div className="sm:col-span-5">
+                {" "}
+                <StudentQueries />
+              </div>
             </div>
             <div className="sm:px-10 p-5">
               <CourseStatus />

@@ -7,6 +7,7 @@ import {
   Tooltip,
   XAxis,
   YAxis,
+  ResponsiveContainer,
 } from "recharts";
 
 export default function ViewerGraph() {
@@ -21,20 +22,19 @@ export default function ViewerGraph() {
   ];
 
   return (
-    <>
-      <BarChart
-        margin={{ top: 0, right: 0, left: -25, bottom: 0 }}
-        width={360}
-        height={250}
-        data={data}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis axisLine={false} tickLine={false} dataKey="day" />
-        <YAxis axisLine={false} tickLine={false} />
-        <Tooltip />
-
-        <Bar dataKey="visitor" barSize={7} fill="#8884d8" />
-      </BarChart>
-    </>
+    <div className="w-full mx-auto">
+      <ResponsiveContainer width="100%" height={250}>
+        <BarChart
+          margin={{ top: 0, right: 0, left: -25, bottom: 0 }}
+          data={data}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis axisLine={false} tickLine={false} dataKey="day" />
+          <YAxis axisLine={false} tickLine={false} />
+          <Tooltip />
+          <Bar dataKey="visitor" barSize={7} fill="#8884d8" />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
   );
 }

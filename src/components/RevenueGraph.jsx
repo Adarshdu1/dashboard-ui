@@ -6,6 +6,7 @@ import {
   Tooltip,
   XAxis,
   YAxis,
+  ResponsiveContainer,
 } from "recharts";
 
 export default function RevenueGraph() {
@@ -23,37 +24,40 @@ export default function RevenueGraph() {
     { visit: 38, sale: 52, month: "Nov" },
     { visit: 83, sale: 35, month: "Dec" },
   ];
+
   return (
-    <AreaChart
-      width={730}
-      height={250}
-      data={data}
-      margin={{ top: 0, right: 0, left: -25, bottom: 0 }}
-    >
-      <defs>
-        <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
-          <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-        </linearGradient>
-      </defs>
-      <XAxis dataKey="month" tickLine={false} axisLine={false} />
-      <YAxis dataKey="visit" axisLine={false} tickLine={false} />
-      <CartesianGrid strokeDasharray="3 3" />
-      <Tooltip />
-      <Area
-        type="natural"
-        dataKey="sale"
-        stroke="#ff007f"
-        fillOpacity={1}
-        fill="url(#fff)"
-      />
-      <Area
-        type="natural"
-        dataKey="visit"
-        stroke="#464677"
-        fillOpacity={1}
-        fill="url(#colorUv)"
-      />
-    </AreaChart>
+    <div className="w-full mx-auto">
+      <ResponsiveContainer width="100%" height={250}>
+        <AreaChart
+          data={data}
+          margin={{ top: 0, right: 0, left: -25, bottom: 0 }}
+        >
+          <defs>
+            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+            </linearGradient>
+          </defs>
+          <XAxis dataKey="month" tickLine={false} axisLine={false} />
+          <YAxis dataKey="visit" axisLine={false} tickLine={false} />
+          <CartesianGrid strokeDasharray="3 3" />
+          <Tooltip />
+          <Area
+            type="natural"
+            dataKey="sale"
+            stroke="#ff007f"
+            fillOpacity={1}
+            fill="url(#fff)"
+          />
+          <Area
+            type="natural"
+            dataKey="visit"
+            stroke="#464677"
+            fillOpacity={1}
+            fill="url(#colorUv)"
+          />
+        </AreaChart>
+      </ResponsiveContainer>
+    </div>
   );
 }

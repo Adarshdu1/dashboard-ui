@@ -6,9 +6,10 @@ import {
   Tooltip,
   XAxis,
   YAxis,
+  ResponsiveContainer,
 } from "recharts";
 
-export default function WeeklyStatGraph({ wide }) {
+export default function WeeklyStatGraph() {
   const data = [
     { visit: 20, sale: 1, month: "Mon" },
     { visit: 55, sale: 25, month: "Tue" },
@@ -18,31 +19,32 @@ export default function WeeklyStatGraph({ wide }) {
     { visit: 65, sale: 30, month: "Sat" },
     { visit: 55, sale: 28, month: "Sun" },
   ];
+
   return (
-    <AreaChart
-      width={wide}
-      height={100}
-      data={data}
-      margin={{ top: 0, right: 0, left: -25, bottom: 0 }}
-    >
-      <defs>
-        <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="2%" stopColor="#8884d8" stopOpacity={0.8} />
-          <stop offset="25%" stopColor="#8884d8" stopOpacity={0} />
-        </linearGradient>
-      </defs>
-      <XAxis hide={true} tickLine={false} axisLine={false} />
-      <YAxis hide={true} axisLine={false} tickLine={false} />
-
-      <Tooltip />
-
-      <Area
-        type="natural"
-        dataKey="sale"
-        stroke="#464677"
-        fillOpacity={1}
-        fill="url(#colorUv)"
-      />
-    </AreaChart>
+    <div className="w-full max-w-screen-xl mx-auto">
+      <ResponsiveContainer width="100%" height={100}>
+        <AreaChart
+          data={data}
+          margin={{ top: 0, right: 0, left: -25, bottom: 0 }}
+        >
+          <defs>
+            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="2%" stopColor="#8884d8" stopOpacity={0.8} />
+              <stop offset="25%" stopColor="#8884d8" stopOpacity={0} />
+            </linearGradient>
+          </defs>
+          <XAxis hide={true} tickLine={false} axisLine={false} />
+          <YAxis hide={true} axisLine={false} tickLine={false} />
+          <Tooltip />
+          <Area
+            type="natural"
+            dataKey="sale"
+            stroke="#464677"
+            fillOpacity={1}
+            fill="url(#colorUv)"
+          />
+        </AreaChart>
+      </ResponsiveContainer>
+    </div>
   );
 }

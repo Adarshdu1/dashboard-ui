@@ -5,7 +5,7 @@ import { SlOptionsVertical } from "react-icons/sl";
 export default function Sale() {
   return (
     <>
-      <div className="sm:w-[250px] w-[360px] text-gray-700">
+      <div className="sm:w-full w-[360px] text-gray-700">
         <div className="flex items-center justify-between">
           <div className="font-bold">Sale</div>
           <div className="">

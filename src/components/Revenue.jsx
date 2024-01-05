@@ -5,7 +5,7 @@ import { FaArrowTrendUp } from "react-icons/fa6";
 export default function Revenue() {
   return (
     <>
-      <div className="2xl:w-[730px] sm:w-[600px] w-[360px]">
+      <div className="2xl:w-full sm:w-[600px] w-[360px]">
         <div className="flex justify-between">
           <div className="flex space-x-4 items-center">
             <p className="font-bold">Revenue</p>
